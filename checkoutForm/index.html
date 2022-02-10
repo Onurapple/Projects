@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5c7edfd842.js" crossorigin="anonymous"></script>
+    <title>CheckOut Form</title>
+</head>
+<body>
+    <h1 id="checkout-title">Checkout</h1>
+    <main>
+        <form action="#" name="myForm" onsubmit="return validateForm()">
+            <div id="contact-information" class="data-form">
+                <h1>Contact information</h1>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <div class="input-field">
+                        <input type="email" name="email" id="email" placeholder="Enter your email...">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>    
+                </div>
+                
+                <div class="campo">
+                    <label for="phone">Phone</label>
+                        <div class="input-field">
+                            <input type="tel" name="phone" id="user-phone-number" placeholder="Enter your phone...">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </div>
+                </div>
+                <div id="shipping-address" class="data-form">
+                    <h1>Shipping address</h1>
+                    <div class="campo">
+                            <label for="name">Full name</label>
+                            <div class="input-field">
+                                <input type="text" name="name" id="user-full-name" placeholder="Enter your Full name...">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="campo">    
+                            <label for="address">Address</label>
+                            <div class="input-field">    
+                                <input type="text" name="address" id="user-address" placeholder="Enter your address...">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="campo">    
+                            <label for="city">City</label>
+                            <div class="input-field">
+                                <input type="text" name="city" id="user-city" placeholder="Enter your city...">
+                                <i class="fas fa-city" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="campo" id="country-field">   
+                            <label for="country">Country</label>
+                            <div class="input-field">
+                                <select name="country" id="user-country">
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="USA">USA</option>
+                                    <option value="England">England</option>
+                                </select>
+                                <i class="fas fa-globe-europe" aria-hidden="true"></i>
+                            </div>
+                        </div> 
+                        <div class="campo" id="postal-code-field">
+                            <label for="postcode">Post Code</label>
+                            <div class="input-field">
+                                <input type="number" name="postcode" id="user-postal-code" placeholder="Enter your postal code...">
+                                <i class="fas fa-mail-bulk" aria-hidden="true"></i>
+                            </div>
+                        </div> 
+                        <div class="campo">   
+                            <input type="checkbox" name="reminder" id="user-reminder">
+                            <label for="reminder">See this information next time</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" id="btn-submit">Continue</button>
+            </div>        
+        </form>
+        <div id="products-preview">
+            <div id="product-painel">
+                <div class="product">
+                    <img src="./img/photo1.png" alt="backbag">
+                    <div class="product-info">
+                        <h2>Vintage Backbag</h2>
+                        <p><strong>$54.99</strong><span class="line-trough"> $94.99 </span></p>
+                        <div class="quantity-controller">
+                            <button><i class="fas fa-minus"></i></button>
+                            <p>|</p>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">    
+                    <img src="./img/photo2.png" alt="sneakers">
+                    <div class="product-info">
+                        <h2>Levi Shoes</h2>
+                        <p><strong>$74.99</strong> <span class="line-trough"> $124.99 </span></p>
+                        <div class="quantity-controller">
+                            <button><i class="fas fa-minus"></i></button>
+                            <p>|</p>
+                            <button><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="buy-detail" id="shipping">
+                    <p>Shipping</p>
+                    <p>$19</p>
+                </div>
+                <div class="buy-detail" id="total">
+                    <p>Total</p>
+                    <p>$148.98</p>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="app.js"></script>
+</body>
+</html>
