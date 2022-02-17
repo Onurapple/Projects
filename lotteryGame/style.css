@@ -1,0 +1,54 @@
+@keyframes renk {
+    0%   {color:red;}
+    25%  {color:rgb(255, 5, 180);}
+    50%  {color:rgb(2, 229, 254);}
+    75%  {color:rgb(1, 254, 1);}
+    100% {color:red;}
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.container{
+    border-radius: 3rem;
+    margin-top: 30px;
+    background-color: bisque;
+    width: 700px;
+    height: 550px;
+}
+.header{
+    margin: 20px auto 50px;
+    color:red;
+}
+#number{
+    height: 2rem;
+    width: 40%;
+    font-size: 1.5rem;
+}
+.button{
+    height: 2rem;
+    font-size: 1.5rem;
+    width: 20%;
+}
+.header2{
+    margin: 20px auto;
+    font-size: 1.5rem;
+    animation-name: renk;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+.bos{
+    font-size: 1.5rem;
+}
+.bos2{
+    margin-top: 20px;
+    font-size: 2rem;
+    color: blue;
+}
