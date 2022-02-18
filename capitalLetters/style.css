@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.bos{
+    padding: 1rem;
+}
+.buttonDiv{
+    text-align: center;
+    margin: 20px;
+    
+}
+.button{
+    background-color: rgb(170, 114, 223);
+}
+.container{
+
+    width: 60%;
+}
+.textArea{
+    width:100%;
+}
