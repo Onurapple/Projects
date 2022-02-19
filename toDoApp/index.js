@@ -2,7 +2,7 @@ const newEvent = document.querySelector(".add-event-input");
 const addBtn   = document.querySelector(".add-btn");
 const eventUl  = document.querySelector(".event-ul");
 let time     = document.querySelector('.add-event-time');
-
+//time.value = new Date();
 
 addBtn.addEventListener("click", ()=>{
     if (newEvent.value == ""){
@@ -22,7 +22,9 @@ eventUl.addEventListener("click", (e)=>{
         console.log(item);
     }
     else if (item.classList.contains("fa-trash")){
-        item.parentElement.parentElement.remove();
+        item.parentElement.parentElement.parentElement.remove();
+        
+        
     }
 });
 
