@@ -15,7 +15,7 @@ myButton.addEventListener("click", () => {
   } else if(i == 10){document.getElementById("ikaz").innerText = `Sorry You Lose :(`;
 } else {
     i++;  
-    if (+userNumber.value < minNumber || +userNumber.value > maxNumber) {
+    if (+userNumber.value <= minNumber || +userNumber.value > maxNumber) {
       alert(`Please enter number only between ${minNumber} and ${maxNumber}.`);
     }
     else if (+userNumber.value < myNumber) {

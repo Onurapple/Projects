@@ -3,6 +3,7 @@ const addBtn   = document.querySelector(".add-btn");
 const eventUl  = document.querySelector(".event-ul");
 let time     = document.querySelector('.add-event-time');
 //time.value = new Date();
+time.max = new Date().toISOString().slice(0, -14);
 
 addBtn.addEventListener("click", ()=>{
     if (newEvent.value == ""){
