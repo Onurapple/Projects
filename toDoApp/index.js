@@ -54,6 +54,8 @@ function AddEvent(eventText){
     trashBtn.innerHTML = "<i class='fas fa-trash'></i>";
     liButton.appendChild(trashBtn);
 
+    if(time.value != ''){
+
     let divRemaining = document.createElement("div");
     divRemaining.classList.add("divRemaining");
     div.appendChild(divRemaining);
@@ -62,6 +64,7 @@ function AddEvent(eventText){
     let remaining = document.createElement('span');
     remaining.classList.add('remainingTime');
     divRemaining.appendChild(remaining);
+    
     
     setInterval(myFunc, 1000);
     
@@ -123,4 +126,5 @@ function AddEvent(eventText){
     /* div.appendChild(remaining);*/
     newEvent.value = "";
     newEvent.focus();
+    }
 }
