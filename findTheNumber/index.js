@@ -15,7 +15,10 @@ myButton.addEventListener("click", () => {
   } else if(i == 10){document.getElementById("ikaz").innerText = `Sorry You Lose :(`;
 } else {
     i++;  
-    if (+userNumber.value < myNumber) {
+    if (+userNumber.value < minNumber || +userNumber.value > maxNumber) {
+      alert(`Please enter number only between ${minNumber} and ${maxNumber}.`);
+    }
+    else if (+userNumber.value < myNumber) {
       minNumber = +userNumber.value;
       document.getElementById(
         "ikaz"
@@ -27,7 +30,9 @@ myButton.addEventListener("click", () => {
         "ikaz"
       ).innerText = ` Enter a number between ${minNumber} and ${maxNumber}`;
       document.getElementById("count-span").innerText = i;
-    } else if (+userNumber.value == myNumber) {
+        
+    } 
+    else if (+userNumber.value == myNumber) {
       resim.style.visibility = 'visible';
       resim.style.margin-top;'20px';  
       document.getElementById("ikaz").innerText = ` Congratulations. You win ${i}. attempt!`;

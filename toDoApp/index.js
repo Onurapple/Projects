@@ -31,25 +31,35 @@ function AddEvent(eventText){
     div.classList.add("event-div");
     eventUl.appendChild(div);
 
+    let liButton = document.createElement("div");
+    liButton.classList.add("liButton");
+    div.appendChild(liButton);
+
+    
+
     let li = document.createElement("li");
     li.classList.add("event-li");
     li.innerText = eventText + ' | ' + time.value.toLocaleString();
-    div.appendChild(li);
+    liButton.appendChild(li);
 
     let checkBtn = document.createElement("button");
     checkBtn.classList.add("event-check-btn");
     checkBtn.innerHTML = "<i class='fas fa-check-square'></i>";
-    div.appendChild(checkBtn);
+    liButton.appendChild(checkBtn);
 
     let trashBtn = document.createElement("button");
     trashBtn.classList.add("event-trash-btn");
     trashBtn.innerHTML = "<i class='fas fa-trash'></i>";
-    div.appendChild(trashBtn);
+    liButton.appendChild(trashBtn);
 
+    let divRemaining = document.createElement("div");
+    divRemaining.classList.add("divRemaining");
+    div.appendChild(divRemaining);
+    
+    
     let remaining = document.createElement('span');
     remaining.classList.add('remainingTime');
-    remaining.style.backgroundColor = 'pink';
-    remaining.style.borderRadius = '0.7rem';
+    divRemaining.appendChild(remaining);
     
     setInterval(myFunc, 1000);
     
@@ -105,10 +115,10 @@ function AddEvent(eventText){
             year--;
         }
         //********************************** */
-        var text = `${year} years ${month} months ${day} days ${hour} hours ${minute} minutes ${second} secons left`
+        var text = `${year} y ${month} m ${day} d ${hour} hr ${minute} min ${second} sec left`
         remaining.innerText = text;
         }    
-    div.appendChild(remaining);
+    /* div.appendChild(remaining);*/
     newEvent.value = "";
     newEvent.focus();
 }

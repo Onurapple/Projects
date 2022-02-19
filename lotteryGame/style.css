@@ -21,20 +21,33 @@ body{
     background-color: bisque;
     width: 700px;
     height: 550px;
+    
 }
 .header{
     margin: 20px auto 50px;
     color:red;
 }
 #number{
-    height: 2rem;
-    width: 40%;
-    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 50%;
+    font-size: 1.1rem;
+    text-align: right;
+    
+    
 }
 .button{
-    height: 2rem;
+    height: 2.5rem;
     font-size: 1.5rem;
     width: 20%;
+    
+}
+.inputButton{
+    
+    height: 10%;
+    display: flex;
+    justify-content: center;
+   
+    
 }
 .header2{
     margin: 20px auto;

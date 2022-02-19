@@ -35,7 +35,7 @@ if (giris.value == 9 || giris.value < 1) {
     myDiv2.innerHTML = ""
     for (let i = 0; i < giris.value; i++) {
         let newP = document.createElement("p");
-        let newText = `${kupon().join(" - ")} | ${joker()} | ${superStar()}`
+        let newText = `${kupon().join(" - ")}  |  ${joker()}  |  ${superStar()}`
         newP.innerText = newText
         myDiv.appendChild(newP);
         myDiv.style.margin-top; '10px'
