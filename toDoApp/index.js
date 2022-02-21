@@ -3,7 +3,7 @@ const addBtn   = document.querySelector(".add-btn");
 const eventUl  = document.querySelector(".event-ul");
 let time     = document.querySelector('.add-event-time');
 //time.value = new Date();
-time.max = new Date().toISOString().slice(0, -14);
+//time.max = new Date().toISOString().slice(0, -14);
 
 addBtn.addEventListener("click", ()=>{
     if (newEvent.value == ""){
@@ -11,6 +11,7 @@ addBtn.addEventListener("click", ()=>{
     }
     else{
         AddEvent(newEvent.value);
+
     }
 });
 
@@ -38,8 +39,6 @@ function AddEvent(eventText){
     liButton.classList.add("liButton");
     div.appendChild(liButton);
 
-    
-
     let li = document.createElement("li");
     li.classList.add("event-li");
     li.innerText = eventText + ' | ' + time.value.toLocaleString();
@@ -55,7 +54,7 @@ function AddEvent(eventText){
     trashBtn.innerHTML = "<i class='fas fa-trash'></i>";
     liButton.appendChild(trashBtn);
 
-    if(time.value != ''){
+   /* if(time.value != ''){
 
     let divRemaining = document.createElement("div");
     divRemaining.classList.add("divRemaining");
@@ -68,6 +67,7 @@ function AddEvent(eventText){
     
     
     setInterval(myFunc, 1000);
+    
     
     time.addEventListener("change", myFunc);
     function myFunc() {
@@ -92,7 +92,7 @@ function AddEvent(eventText){
         let hour = HourEntered - currentHour;
         let minute = minuteEntered - currentMinute;
         let second = secondEntered - currentSecond;
-        //********************************* */ 
+        //*********************************  
         if (second < 0) {
             second += 60;
             minute--;
@@ -120,12 +120,62 @@ function AddEvent(eventText){
             month += 12;
             year--;
         }
-        //********************************** */
+        //********************************** 
         var text = `${year} y ${month} m ${day} d ${hour} hr ${minute} min ${second} sec left`
         remaining.innerText = text;
-        }    
-    /* div.appendChild(remaining);*/
+    }    
+} */
+/* div.appendChild(remaining);*/
+    
     newEvent.value = "";
     newEvent.focus();
-    }
 }
+
+
+/* var count1Div = document.getElementById('count1');
+var count2Div = document.getElementById('count2');
+var count3Div = document.getElementById('count3');
+
+function appendZero(num) {
+ return num < 10 ? "0"+num : num;
+}
+
+function setCountContent(element, count) {
+var min = count.getMinutes();
+var sec = count.getSeconds();
+var hour = count.getHours();
+
+element.innerText = appendZero(hour) + " : " + appendZero(min) + " : " + appendZero(sec);
+}
+
+var interval = setInterval(function(e){
+var count = new Date();
+var count2 = new Date();
+var count3 = new Date();
+
+count2.setMinutes(count.getMinutes() + 1);
+count3.setMinutes(count2.getMinutes() + 1);
+
+setCountContent(count1Div, count);
+setCountContent(count2Div, count2);
+setCountContent(count3Div, count3);
+
+// it will stop when minutes are equal to 13
+if (count.getMinutes() == 13) {
+  clearInterval(interval);
+}
+
+}, 1000);
+
+
+
+
+*******************HTML KISMI*******************
+
+<div id="count1" style="background-color: darkmagenta; color: white;"></div>
+<div id="count2" style="background-color: orange; color: white;"></div>
+<div id="count3" style="background-color: whitesmoke; color: black;"></div>
+
+
+
+*/
